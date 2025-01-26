@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.con {
+    width: 100vw;
+    height: 15vh;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.925);
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumbnail {
+    top: 5px;
+  position: absolute;
+  border-radius: 6px;
+  left: 10px;
+  cursor: pointer;
+}
+.duration {
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 2px;
+  background-color: hsla(0, 0%, 0%, 0.555);
+  border-radius: 4px;
+  position: relative;
+  top: 114px;
+  left: 200px;
+}
+.title{
+    position: relative;
+    left: 225px;
+    top:5px;
+    font-size: large;
+}
+.details{
+    font-size: small;
+    color: rgb(173, 173, 173);
+    position: relative;
+    left: 225px;
+    top: 20px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <div id="box1">
+        <img class="thumbnail"></img>
+        <div class="duration"></div>
+      </div>
+      <div id="box2">
+        <div class="title"></div>
+        <div class="details"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function createcard(title, cname, views, monthsold, duration, thumbnail){
+   document.querySelector(".title").textContent=title;
+   document.querySelector(".thumbnail").src=thumbnail;
+   document.querySelector(".duration").textContent=duration;
+   if (views>=1000 && views<=999999) {
+    views=views/1000+'K'
+   } else if(views>=1000000 && views<=999999999){
+    views=views/1000000+'M'
+   }
+   document.querySelector(".details").textContent=cname +' · '+views +' · '+monthsold+' mounths ago';
+}
+createcard("Introduction to Backend | Sigma Web Dev video #2", "CodeWithHarry", 560000, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw"); 
+  </script>
+</html>
