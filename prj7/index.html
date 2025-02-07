@@ -1,0 +1,90 @@
+<!-- questions related to conditional statement -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Bank</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h2>📝Questions related to control flow.</h2>
+    <div>
+        <pre>
+    <b><i>1.Create a function that accepts a number and returns whether it's even or odd.</i></b>
+    <code id="que1">
+    function check(num) {
+    if(num % 2 ==0){
+        return "no. is Even"
+    }else{
+        return "no. is Odd"
+    }
+    }
+
+    console.log(check(7));
+    console.log(check(2));
+    </code>
+    <hr>
+    <button onclick="copyque1()">copy</button>
+    </pre>
+    
+    <pre>
+    <b><i>2. Write a function that takes a number and prints "Positive", "Negative", or "Zero" based on the input.</i></b>
+    <code id="que2">
+    function prints(numb) {
+    if (numb > 0) {
+        return "No. is positive";
+    } else if (numb < 0) {
+        return "No. is negative";
+    } else {
+        return "No. is zero";
+    }
+    }
+    console.log(prints(2));
+    console.log(prints(-5));
+    console.log(prints(0));
+    </code>
+    <hr>
+    <button onclick="copyque2()">copy</button>
+    </pre>
+    
+    <pre>
+    <b><i>3.Implement a program to check if a given number is divisible by both 3 and 5.</i></b>
+    <code id="que3">
+    function prgm(number) {
+    if (number % 3==0 && number% 5==0) {
+        console.log("divisible by both");   
+    } else {
+    console.log("not divisible");
+    }
+    }
+    prgm(15)
+    prgm(5)
+    </code>
+    <hr>
+    <button onclick="copyque3()">copy</button>
+    </pre>
+
+    <pre>
+    <b><i>4.Write a loop that prints all numbers from 1 to 100.</i></b>
+    <code id="que4">
+    for (let i = 1; i <= 100; i++) {
+    console.log(i) 
+    }
+    </code>
+    <hr>
+    <button onclick="copyque4()">copy</button>
+    </pre>
+    </div>
+    </main>
+<footer>
+    <h3>😊😊Thankyou for visiting!!!!</h3>
+</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
